@@ -112,4 +112,41 @@ A & & B \ar@{-->}_{a'}[ul] \\
 \]
 \end{slide}
 
+\begin{slide}{Cherry-picking in Darcs}
+\[
+\xymatrix{
+	&& \bullet \\
+	\bullet && \bullet \ar[u]_a \\
+	\bullet \ar[u] && \bullet \ar[u] \\
+	\bullet \ar[u] && \bullet \ar[u]_b \\
+	& \bullet \ar[ul] \ar[ur]
+}
+\]
+\end{slide}
+
+\begin{slide}{Cherry-picking in Darcs}
+\[
+\xymatrix{
+	&& \bullet \\
+	\bullet && \bullet \ar[u] \\
+	\bullet \ar[u] && \bullet \ar[u]_{} \\
+	\bullet \ar[u] && \bullet \ar[u]_{a'} \\
+	& \bullet \ar[ul] \ar[ur]_{b'}
+}
+\]
+\end{slide}
+
+\begin{slide}{Cherry-picking in Darcs}
+\[
+\xymatrix{
+	\bullet \\
+	\bullet \ar@{-->}[u]^{a''} && \bullet \\
+	\bullet \ar@{-->}[u]^{b''} && \bullet \ar[u] \\
+	\bullet \ar[u] && \bullet \ar[u] \ar@{-->}[uuull] \\
+	\bullet \ar[u] && \bullet \ar[u]_{a'} \\
+	& \bullet \ar[ul] \ar[ur]_{b'}
+}
+\]
+\end{slide}
+
 \end{document}
