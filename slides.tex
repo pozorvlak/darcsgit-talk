@@ -42,6 +42,13 @@ github.com/pozorvlak}
 \end{itemize}
 \end{slide}
 
+\begin{slide}{A git history graph}
+\begin{center}
+\includegraphics[width=8cm]{gitrepo_small.eps}
+\end{center}
+\end{slide}
+
+
 \begin{slide}{Darcs}
 \begin{itemize}
 \item Written by physicist David Roundy in 2003
@@ -89,15 +96,22 @@ A & & B \ar@{-->}_{a'}[ul] \\
 \]
 \end{slide}
 
+\overlays{5}{
 \begin{slide}{Merging in darcs}
 \[
 \xymatrix{
-& \bullet \ar@{-->}[dl]^*{\object{\scriptstyle{B^{-1\prime}}}} \\
-\bullet \ar@/^1pc/[ur]^{B'}
-& & \bullet \ar@/^1pc/[dl]^*{\object{\scriptstyle{B^{-1}}}} \ar[ul]_{A'} \\
+& \bullet
+\fromSlide*{3}{\ar[dl]^*{\object{\scriptstyle{B^{-1\prime}}}}}
+\\
+\bullet
+\fromSlide*{4}{\ar@{.>}@/^1pc/[ur]^{B'}}
+& & \bullet
+	\fromSlide*{2}{\ar@/^1pc/[dl]^*{\object{\scriptstyle{B^{-1}}}}}
+	\fromSlide*{3}{\ar[ul]_{A'}} \\
 & \bullet \ar[ul]^A \ar[ur]^B
 }
 \]
+\FromSlide{5}
 \begin{itemize}
 \item Looks a lot like a rebase
 \item But no false positives - if it succeeds, it's correct
@@ -105,6 +119,7 @@ A & & B \ar@{-->}_{a'}[ul] \\
 \item Can take exponential time in case of conflicts
 \end{itemize}
 \end{slide}
+}
 
 % Cherry-picking
 
