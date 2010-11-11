@@ -123,17 +123,20 @@ A & & B \ar@{-->}_{a'}[ul] \\
 
 % Cherry-picking
 
+\overlays{2}{
 \begin{slide}{Cherry-picking in git}
 \[
 \xymatrix{
-	\bullet \\
-	\bullet \ar@{--}[u]^{a'} && \bullet \\
+	\fromSlide*{2}{\bullet} \\
+	\bullet \fromSlide*{2}{\ar@{--}[u]^{a'}}
+	&& \bullet \\
 	\bullet \ar[u] && \bullet \ar[u] \\
 	\bullet \ar[u] && \bullet \ar[u]_a \\
 	& \bullet \ar[ul] \ar[ur]
 }
 \]
 \end{slide}
+}
 
 \begin{slide}{Cherry-picking in darcs}
 \[
