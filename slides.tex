@@ -1,10 +1,14 @@
 \documentclass[pdf]{prosper}
 \input{defs.tex}
+\usepackage[all]{xy}
 \title{Darcs versus Git}
 \author{Miles Gould}
 \institution{University of Edinburgh}
 \begin{document}
 \maketitle
+
+% Overview
+
 \begin{slide}{Similarities}
 \begin{itemize}
 \item Both highly distributed
@@ -13,6 +17,7 @@
 \item But under the hood, totally different
 \end{itemize}
 \end{slide}
+
 \begin{slide}{Git}
 \begin{itemize}
 \item Written by some Finnish dude in 2005 as a side-project
@@ -28,6 +33,7 @@
 \item History is a DAG of commits (snapshots).
 \end{itemize}
 \end{slide}
+
 \begin{slide}{Darcs}
 \begin{itemize}
 \item Written by physicist David Roundy in 2003
@@ -39,4 +45,71 @@
 \item Patches may \emph{depend} on other patches
 \end{itemize}
 \end{slide}
+
+% Merging
+
+\begin{slide}{Merging in Git}
+\[
+\xymatrix{
+& \bullet \\
+A \ar@{-->}[ur] & & B \ar@{-->}[ul] \\
+& M \ar[ul] \ar[ur]
+}
+\]
+\end{slide}
+
+\begin{slide}{A more complex merge in Git}
+\[
+\xymatrix{
+& \bullet \\
+A \ar@{-->}[ur] & & B \ar@{-->}[ul] \\
+\\
+M1 \ar[uu] \ar[uurr]
+&& M2 \ar[uull] \ar[uu] \\
+& \bullet \ar[ul] \ar[ur]
+}
+\]
+\end{slide}
+
+\begin{slide}{Rebasing in Git}
+\[
+\xymatrix{
+& \bullet \\
+A & & B \ar@{-->}_{a'}[ul] \\
+& M \ar[ul]^a \ar[ur]
+}
+\]
+\end{slide}
+
+\begin{slide}{Merging in Darcs}
+\[
+\xymatrix{
+& \bullet \ar@{-->}[dl]^*{\object{\scriptstyle{B^{-1\prime}}}} \\
+\bullet \ar@/^1pc/[ur]^{B'}
+& & \bullet \ar@/^1pc/[dl]^*{\object{\scriptstyle{B^{-1}}}} \ar[ul]_{A'} \\
+& \bullet \ar[ul]^A \ar[ur]^B
+}
+\]
+\begin{itemize}
+\item Looks a lot like a rebase
+\item But no false positives - if it succeeds, it's correct
+\item Magic hidden in commutators - need one for each pair of patch types
+\item Can take exponential time in case of conflicts
+\end{itemize}
+\end{slide}
+
+% Cherry-picking
+
+\begin{slide}{Cherry-picking in Git}
+\[
+\xymatrix{
+	\bullet \\
+	\bullet \ar@{--}[u]^{a'} && \bullet \\
+	\bullet \ar[u] && \bullet \ar[u] \\
+	\bullet \ar[u] && \bullet \ar[u]_a \\
+	& \bullet \ar[ul] \ar[ur]
+}
+\]
+\end{slide}
+
 \end{document}
