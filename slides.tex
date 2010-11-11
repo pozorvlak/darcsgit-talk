@@ -1,6 +1,7 @@
 \documentclass[pdf]{prosper}
 \input{defs.tex}
 \usepackage[all]{xy}
+\usepackage{graphicx}
 \title{Darcs versus Git}
 \author{Miles Gould}
 \institution{University of Edinburgh}
@@ -175,5 +176,36 @@ A & & B \ar@{-->}_{a'}[ul] \\
 \item But less need for topic branches
 \end{itemize}
 \end{slide}
+
+% Rosetta Stone
+
+\overlays{2}{
+\begin{slide}{A Git/darcs Rosetta Stone}
+	\begin{center}
+\onlySlide*{1}{
+	\includegraphics[width=8cm]{babylon.eps}
+}
+\fromSlide{2}{
+	\begin{tabular}{ | p{5cm} | p{5cm} | }
+	\hline
+	\textbf{git} & \textbf{darcs} \\
+	\hline
+	long-lived branch & repository \\
+	\hline
+	commit	& collection of patches \\
+	\hline
+	rebase --interactive & ``preparation branch'' \\
+	\hline
+	topic branch	& patch \\
+	\hline
+	user specifies patch dependencies by branching
+	& patch dependencies calculated optimistically by system \\
+	\hline
+	\end{tabular}
+}
+\end{center}
+\end{slide}
+}
+
 
 \end{document}
