@@ -5,6 +5,38 @@
 \institution{University of Edinburgh}
 \begin{document}
 \maketitle
+\begin{slide}{Similarities}
+\begin{itemize}
+\item Both highly distributed
+\item Both allow rewriting of unpublished history
+\item Many features borrowed from each other
+\item But under the hood, totally different
+\end{itemize}
+\end{slide}
 \begin{slide}{Git}
+\begin{itemize}
+\item Written by some Finnish dude in 2005 as a side-project
+\item C/shell/Perl/Python/...
+\item content-addressable filesystem
+\begin{itemize}
+	\item everything indexed by hash of contents
+	\item a version is a tree of blobs
+	\item a commit is a tree, pointers to parents, metadata
+	\item diffs calculated as needed
+\end{itemize}
+\item Inspired by Monotone (but faster)
+\item History is a DAG of commits (snapshots).
+\end{itemize}
+\end{slide}
+\begin{slide}{Darcs}
+\begin{itemize}
+\item Written by physicist David Roundy in 2003
+\item Initially C++, rewritten in Haskell
+\item A repository is an \emph{unordered collection of patches}
+\item A patch is an \emph{abstract atomic change}
+\item To apply a patch to a repo, must calculate a concrete \emph{effect}
+\item Potential for high-level patch types
+\item Patches may \emph{depend} on other patches
+\end{itemize}
 \end{slide}
 \end{document}
