@@ -73,18 +73,20 @@ A \ar@{-->}[ur] & & B \ar@{-->}[ul] \\
 \]
 \end{slide}
 
+\overlays{4}{
 \begin{slide}{A more complex merge in git}
 \[
 \xymatrix{
-& \bullet \\
-A \ar@{-->}[ur] & & B \ar@{-->}[ul] \\
-\\
-M1 \ar[uu] \ar[uurr]
-&& M2 \ar[uull] \ar[uu] \\
-& \bullet \ar[ul] \ar[ur]
+& \fromSlide*{4}{\bullet} \\
+A \fromSlide*{4}{\ar@{-->}[ur]} & & B \fromSlide*{4}{\ar@{-->}[ul]} \\
+& \fromSlide*{3}{\bullet \ar[ul] \ar[ur]} \\
+M1 \ar[uu] \untilSlide*{2}{\ar[uurr]} \fromSlide*{3}{\ar[ur]}
+&& M2 \untilSlide*{2}{\ar[uull]} \fromSlide*{3}{\ar[ul]} \ar[uu] \\
+& \fromSlide*{2}{\bullet \ar[ul] \ar[ur]}
 }
 \]
 \end{slide}
+}
 
 \begin{slide}{Rebasing in git}
 \[
