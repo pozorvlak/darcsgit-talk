@@ -63,15 +63,19 @@ github.com/pozorvlak}
 
 % Merging
 
+\overlays{2}{
 \begin{slide}{Merging in git}
 \[
 \xymatrix{
-& \bullet \\
-A \ar@{-->}[ur] & & B \ar@{-->}[ul] \\
+& \fromSlide*{2}{\bullet} \\
+A \fromSlide*{2}{\ar@{-->}[ur]} & & B \fromSlide*{2}{\ar@{-->}[ul]} \\
 & M \ar[ul] \ar[ur]
 }
 \]
+\untilSlide*{1}{$M$ is the \emph{most recent common ancestor} of $A$ and $B$.}
+\fromSlide*{2}{Use 3-way merging.}
 \end{slide}
+}
 
 \overlays{4}{
 \begin{slide}{A more complex merge in git}
