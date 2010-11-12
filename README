@@ -9,4 +9,7 @@ Slides for a talk given to Glasgow.pm (a mostly git-using audience) on
    (spoilers: the answers are the same!).
 
 Thanks very much to Eric Kow and Guillaume Hoffman for answering my questions
-about darcs.
+about darcs. Any errors remaining are of course my own.
+
+To build the TeX source you'll need the prosper, xy and graphicsx packages
+installed.
