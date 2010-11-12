@@ -1,0 +1,12 @@
+Slides for a talk given to Glasgow.pm (a mostly git-using audience) on
+11/11/2010. The idea was to
+
+ - explain a little bit of what git's doing under the hood
+ - explain how the darcs model differs
+ - cut through some of the tangle of conflicting terminology
+ - explain why git users think branching's such a big deal, and why darcs users
+   think that cherry-picking's such a big deal
+   (spoilers: the answers are the same!).
+
+Thanks very much to Eric Kow and Guillaume Hoffman for answering my questions
+about darcs.
