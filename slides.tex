@@ -220,11 +220,13 @@ A & & B \fromSlide*{2}{\ar@{-->}_{a'}[ul]}
 	\hline
 	long-lived branch & repository \\
 	\hline
-	commit	& collection of patches \\
+	snapshot of source tree	& collection of patches \\
 	\hline
 	rebase --interactive & ``preparation branch'' \\
 	\hline
-	topic branch	& patch \\
+	topic branch	& patch (+ dependencies) \\
+	\hline
+	pulling a topic branch & cherry-picking a patch \\
 	\hline
 	user specifies patch dependencies by branching
 	& patch dependencies calculated optimistically by system \\
