@@ -92,10 +92,10 @@ M1 \ar[uu] \untilSlide*{2}{\ar[uurr]} \fromSlide*{3}{\ar[ur]}
 \begin{slide}{Rebasing in git}
 \[
 \xymatrix{
-& \bullet \\
-A & & B \fromSlide*{2}{\ar@{-->}_{a'}[ul]}
+& \fromSlide*{2}{A} \\
+\untilSlide*{1}{A} & & B \fromSlide*{2}{\ar@{-->}_{a'}[ul]}
  \\
-& M \ar[ul]^a \ar[ur]
+& M \untilSlide*{1}{\ar[ul]^a} \ar[ur]
 }
 \]
 \end{slide}
@@ -105,7 +105,7 @@ A & & B \fromSlide*{2}{\ar@{-->}_{a'}[ul]}
 \begin{slide}{Merging in darcs}
 \[
 \xymatrix{
-& \bullet
+& \fromSlide*{3}{\bullet}
 \fromSlide*{3}{\ar[dl]^*{\object{\scriptstyle{B^{-1\prime}}}}}
 \\
 \bullet
