@@ -92,7 +92,7 @@ M1 \ar[uu] \untilSlide*{2}{\ar[uurr]} \fromSlide*{3}{\ar[ur]}
 \end{slide}
 }
 
-\overlays{2}{
+\overlays{3}{
 \begin{slide}{Rebasing in git}
 \[
 \xymatrix{
@@ -102,6 +102,14 @@ M1 \ar[uu] \untilSlide*{2}{\ar[uurr]} \fromSlide*{3}{\ar[ur]}
 & M \untilSlide*{1}{\ar[ul]^a} \ar[ur]
 }
 \]
+\fromSlide*{3}{
+\begin{itemize}
+\item $a'$ and $a$ have different identities (hashes)
+\item But do the same thing
+\item $a$ is still in the repo (until garbage-collected)
+\item Branch $A$ now points to the new commit
+\end{itemize}
+}
 \end{slide}
 }
 
